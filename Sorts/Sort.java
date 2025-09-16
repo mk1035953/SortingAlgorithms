@@ -6,13 +6,11 @@ import java.util.Collections;
 public class Sort{
     protected int[] array;
     protected String type;
-    private boolean isNew;
 
     //Constructors
     public Sort(){
         this.array = new int[100];
         this.type = "N/A";
-        isNew = true;
         shuffle();
     }
     public Sort(int[] array){
@@ -22,7 +20,6 @@ public class Sort{
     public Sort(String type){
         this.array = new int[100];
         this.type = type;
-        isNew = true;
         shuffle();
     }
     public Sort(String type, int[] array){
@@ -44,7 +41,6 @@ public class Sort{
         for(int i = 0; i<this.array.length;i++){
             array[i] = i;
         }
-        isNew = false;
         ArrayList<Integer> temp = new ArrayList();
         for(int x:array){
             temp.add(x);
@@ -56,5 +52,4 @@ public class Sort{
     }
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}
-
 }
