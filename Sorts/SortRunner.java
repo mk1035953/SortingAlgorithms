@@ -1,3 +1,6 @@
+/*
+* This is the runner class to test all the Sorting algorithms that are available
+*/
 public class SortRunner {
     public static void main(String[] args){
         ShellSort shell = new ShellSort();
@@ -6,3 +9,4 @@ public class SortRunner {
         System.out.println(shell.toString());
     }
 }
+
