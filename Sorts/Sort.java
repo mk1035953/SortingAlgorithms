@@ -1,3 +1,6 @@
+/*
+* this is the generic class for Sorting Algorithms, it has features to shuffle arrays and has feature to print out the arrays provided
+*/
 import java.util.ArrayList;
 import java.util.Collections;
 public class Sort{
@@ -53,4 +56,5 @@ public class Sort{
     }
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}
+
 }
