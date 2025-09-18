@@ -1,10 +1,4 @@
-/*
-* This is Shell Sort, a Sorting algorithm that helps to mitigate downside of Insertion Sort
-* It is a gapped Insertion Sort, where it inserts the numbers across the array but only along the lines of gap
-* It is a relatively fast Sort that is memory efficient and decently time efficient with good overall times
-* the downside is it is not a true divide and conquer sort, unlike Merge Sort or Quick Sort
-* So on average it will be a bit quicker
-*/
+package Sorts;
 import java.util.ArrayList;
 public class ShellSort extends Sort{
     private ArrayList<Integer> gapsize = new ArrayList();
@@ -65,3 +59,4 @@ public class ShellSort extends Sort{
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
 }
+
