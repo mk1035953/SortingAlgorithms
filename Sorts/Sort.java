@@ -1,3 +1,4 @@
+package Sorts;
 import java.util.ArrayList;
 import java.util.Collections;
 public class Sort{
@@ -70,3 +71,4 @@ public class Sort{
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}
 }
+
