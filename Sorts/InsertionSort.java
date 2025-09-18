@@ -1,6 +1,3 @@
-/*
- * The standard insertion sort, a natural and intuitive sort, where you find the element's place in the array
- */
 public class InsertionSort extends Sort{
     public InsertionSort(){
         super("Insertion");

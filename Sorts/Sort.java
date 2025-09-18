@@ -1,7 +1,3 @@
-
-/*
-* this is the generic class for Sorting Algorithms, it has features to shuffle arrays and has feature to print out the arrays provided
-*/
 import java.util.ArrayList;
 import java.util.Collections;
 public class Sort{

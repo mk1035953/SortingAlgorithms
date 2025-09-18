@@ -1,7 +1,3 @@
-/*
-* The standard BubbleSort Algorithm, it is intended to be a very simple and natural algorithm swapping pairs that are not in the right spot.
-* However it is typically not very fast, only used as a last resort, or need a quick sort for a small amount of elements
-*/
 public class BubbleSort extends Sort{
 
     //Constructors
