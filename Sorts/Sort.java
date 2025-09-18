@@ -1,3 +1,4 @@
+
 /*
 * this is the generic class for Sorting Algorithms, it has features to shuffle arrays and has feature to print out the arrays provided
 */
@@ -49,6 +50,26 @@ public class Sort{
         for(int i = 0; i<array.length;i++){
             array[i] = temp.get(i);
         }
+    }
+    public double avgTimeTest(int numOfTests){
+        long sumTime = 0;
+        for(int i = 0; i<numOfTests;i++){
+            long startTime = System.nanoTime();
+            this.sort();
+            long endTime = System.nanoTime();
+            sumTime += (endTime-startTime);
+            this.shuffle();
+        }
+        sumTime = sumTime / numOfTests;
+        return sumTime/1000000000.0;//Nanoseconds to Seconds
+    }
+    public void swap(int a, int b){
+        if(a<0||b<0||a>array.length||b>array.length){
+            return;
+        }
+        int temp = array[a];
+        array[a] = array[b];
+        array[b] = temp;
     }
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}

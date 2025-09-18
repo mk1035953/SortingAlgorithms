@@ -10,10 +10,7 @@ public class ShellSort extends Sort{
     private ArrayList<Integer> gapsize = new ArrayList();
     public ShellSort(){
         super("Shell");
-        int[] defaultGaps = {1,3,11,37,113,347,1049,3163,9491};
-        for(int i:defaultGaps){
-            gapsize.add(i);
-        }
+        makeGaps();
     }
     public ShellSort(int[] array){
         super("Shell",array);
@@ -48,14 +45,23 @@ public class ShellSort extends Sort{
                 }
                 int j = i;
                 while(j>=0&&this.array[j]>this.array[j+gapsize.get(gap)]){
-                    int temp = array[j];
-                    array[j] = array[j+gapsize.get(gap)];
-                    array[j+gapsize.get(gap)] = temp;
+                    swap(j,j+gapsize.get(gap));
                     j-=gapsize.get(gap);
                 }
             }
             gap--;
         }
     }
+    public double avgTimeTest(int numOfTests){
+        long sumTime = 0;
+        for(int i = 0; i<numOfTests;i++){
+            long startTime = System.nanoTime();
+            this.sort();
+            long endTime = System.nanoTime();
+            sumTime += (endTime-startTime);
+            this.shuffle();
+        }
+        sumTime = sumTime / numOfTests;
+        return sumTime/1000000000.0;//Nanoseconds to Seconds
+    }
 }
-

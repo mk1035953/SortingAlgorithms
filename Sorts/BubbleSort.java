@@ -22,13 +22,22 @@ public class BubbleSort extends Sort{
             swaps = 0;
             for(int i = 0; i<this.array.length-1;i++){
                 if(this.array[i]>this.array[i+1]){
-                    int temp = array[i];
-                    array[i] = array[i+1];
-                    array[i+1] = temp;
+                    swap(i,i+1);
                     swaps++;
                 }
             }
         }
     }
+    public double avgTimeTest(int numOfTests){
+        long sumTime = 0;
+        for(int i = 0; i<numOfTests;i++){
+            long startTime = System.nanoTime();
+            this.sort();
+            long endTime = System.nanoTime();
+            sumTime += (endTime-startTime);
+            this.shuffle();
+        }
+        sumTime = sumTime / numOfTests;
+        return sumTime/1000000000.0;//Nanoseconds to Seconds
+    }
 }
-
