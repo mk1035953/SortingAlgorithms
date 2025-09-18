@@ -1,3 +1,4 @@
+package Sorts;
 public class ICantBelieveItCanSort extends Sort{
     public ICantBelieveItCanSort(){
         super("ICantBelieveItCanSort");
@@ -27,3 +28,4 @@ public class ICantBelieveItCanSort extends Sort{
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
 }
+
