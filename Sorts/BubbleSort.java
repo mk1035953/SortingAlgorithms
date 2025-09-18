@@ -1,3 +1,4 @@
+package Sorts;
 public class BubbleSort extends Sort{
 
     //Constructors
@@ -37,3 +38,4 @@ public class BubbleSort extends Sort{
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
 }
+
