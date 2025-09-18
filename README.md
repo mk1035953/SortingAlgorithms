@@ -15,6 +15,10 @@ This repository contains implementations of various sorting algorithms. It serve
 ## Algorithms Included
 
 - Bubble Sort
+- Exchange Sort
+- I Can't Believe It Can Sort
+- Insertion Sort
+- Selection Sort
 - Shell Sort
 - More to be added
 
