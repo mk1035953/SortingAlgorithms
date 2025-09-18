@@ -1,3 +1,4 @@
+import Sorts.*;
 public class SortRunner {
     public static void main(String[] args){
         ShellSort sort = new ShellSort();
@@ -23,3 +24,4 @@ public class SortRunner {
         */
     }
 }
+
