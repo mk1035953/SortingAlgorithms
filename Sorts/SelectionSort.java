@@ -1,3 +1,4 @@
+package Sorts;
 public class SelectionSort extends Sort{
     public SelectionSort(){
         super("Selection");
@@ -31,3 +32,4 @@ public class SelectionSort extends Sort{
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
 }
+
