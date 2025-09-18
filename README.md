@@ -6,6 +6,7 @@ A collection of classic sorting algorithms implemented for educational and pract
 
 - [Overview](#overview)
 - [Algorithms Included](#algorithms-included)
+- [Algorithm Descriptions](#algorithm-descriptions)
 - [License](#license)
 
 ## Overview
