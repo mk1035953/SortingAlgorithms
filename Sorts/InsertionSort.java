@@ -1,3 +1,4 @@
+package Sorts;
 public class InsertionSort extends Sort{
     public InsertionSort(){
         super("Insertion");
@@ -26,4 +27,5 @@ public class InsertionSort extends Sort{
         sumTime = sumTime / numOfTests;
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
+
 }
