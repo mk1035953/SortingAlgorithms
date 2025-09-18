@@ -1,3 +1,4 @@
+package Sorts;
 public class ExchangeSort extends Sort{
     public ExchangeSort(){
         super("Exchange");
@@ -27,3 +28,4 @@ public class ExchangeSort extends Sort{
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
 }
+
