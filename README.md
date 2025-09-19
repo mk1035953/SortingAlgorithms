@@ -21,6 +21,9 @@ This repository contains implementations of various sorting algorithms. It serve
 - Exchange Sort
 - I Can't Believe It Can Sort
 - Shell Sort
+- Merge Sort
+- Merge-Insertion Sort
+- Quick Sort
 - More to be added
 
 ## Algorithm Descriptions
@@ -30,6 +33,7 @@ This repository contains implementations of various sorting algorithms. It serve
 - Exchange Sort - this is an improvement of Selection Sort where instead of selecting the smallest element of the list and increasing as it goes, it exchanges the current index with increasingly smaller elements in the list
 - The I Can't Believe It Can Sort - this a "joke" algorithm, it is a simple algorithm that is just a less efficient version of Exchange Sort
 - Shell Sort - this is a more complex version of Insertion Sort, it is a gapped Insertion Sort where you have a series of gapsizes that slowly decrease into standard Insertion Sort, the point of the gap sizes is to get the larger moves out of the way, so that it mitigates the main drawback of the Insertion Sort, where massive moves will be significantly slower.
+- Merge Sort - this is a faster sorting algorithm where you use the divide-and-conquer strategy to very quickly sort the array, this sort divides the array in half then sorts each half of the array recursively then merges them back together(Note: this results in quicker times at the cost of memory)
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
