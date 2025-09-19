@@ -15,17 +15,4 @@ public class ExchangeSort extends Sort{
             }
         }
     }
-    public double avgTimeTest(int numOfTests){
-        long sumTime = 0;
-        for(int i = 0; i<numOfTests;i++){
-            long startTime = System.nanoTime();
-            this.sort();
-            long endTime = System.nanoTime();
-            sumTime += (endTime-startTime);
-            this.shuffle();
-        }
-        sumTime = sumTime / numOfTests;
-        return sumTime/1000000000.0;//Nanoseconds to Seconds
-    }
 }
-

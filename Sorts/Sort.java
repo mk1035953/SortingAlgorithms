@@ -4,11 +4,15 @@ import java.util.Collections;
 public class Sort{
     protected int[] array;
     protected String type;
+    private int defLen = 10000;
 
     //Constructors
     public Sort(){
-        this.array = new int[100];
+        this.array = new int[defLen];
         this.type = "N/A";
+        for(int i = 0; i<defLen;i++){
+            array[i] = i;
+        }
         shuffle();
     }
     public Sort(int[] array){
@@ -16,8 +20,11 @@ public class Sort{
         this.type = "N/A";
     }
     public Sort(String type){
-        this.array = new int[100];
+        this.array = new int[defLen];
         this.type = type;
+        for(int i = 0; i<defLen;i++){
+            array[i] = i;
+        }
         shuffle();
     }
     public Sort(String type, int[] array){
@@ -36,12 +43,9 @@ public class Sort{
         return str;
     }
     public void shuffle(){
-        for(int i = 0; i<this.array.length;i++){
-            array[i] = i;
-        }
-        ArrayList<Integer> temp = new ArrayList();
-        for(int x:array){
-            temp.add(x);
+        ArrayList<Integer> temp = new ArrayList(array.length);
+        for(int i = 0; i<array.length;i++){
+            temp.add(array[i]);
         }
         Collections.shuffle(temp);
         for(int i = 0; i<array.length;i++){
@@ -49,15 +53,19 @@ public class Sort{
         }
     }
     public double avgTimeTest(int numOfTests){
-        long sumTime = 0;
+        double sumTime = 0;
         for(int i = 0; i<numOfTests;i++){
             long startTime = System.nanoTime();
             this.sort();
             long endTime = System.nanoTime();
-            sumTime += (endTime-startTime);
+            if(sumTime!=0){
+                sumTime = (endTime-startTime);
+            }
+            else{
+                sumTime += sumTime+(endTime-startTime)/2.0;
+            }
             this.shuffle();
         }
-        sumTime = sumTime / numOfTests;
         return sumTime/1000000000.0;//Nanoseconds to Seconds
     }
     public void swap(int a, int b){
@@ -71,4 +79,3 @@ public class Sort{
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}
 }
-
