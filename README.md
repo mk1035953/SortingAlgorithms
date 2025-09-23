@@ -24,6 +24,7 @@ This repository contains implementations of various sorting algorithms. It serve
 - Merge Sort
 - Merge-Insertion Sort
 - Quick Sort
+- Heap Sort
 - More to be added
 
 ## Algorithm Descriptions
@@ -36,6 +37,7 @@ This repository contains implementations of various sorting algorithms. It serve
 - Merge Sort - this is a faster sorting algorithm where you use the divide-and-conquer strategy to very quickly sort the array, this sort divides the array in half then sorts each half of the array recursively then merges them back together(Note: this results in quicker times at the cost of memory)
 - Merge-Insertion Sort - this sorting algorithm is the standard merge sort, but it uses insertion sort to merge the two lists, this should theoretically be faster, however due to poor integration, it really isn't faster
 - Quick Sort - this is one of if not the fastest sorting algorithms, and is one the most widely used for its speed, it set one element to be the pivot and partitions the array into numbers greater than the pivot and numbers less than the pivot, then puts the pivot in the middle and sorts the two partitioned sub-arrays recursively.(Note: Like Merge Sort it will also be using more memory, but it is worth it for the speed of the Sort)
+- Heap Sort - this is a less common sorting algorithm, but it's algorithm is used in faster and more complex algorithms, this sorting algorithm makes an improvement to the array itself instead of just sorting an unknown unsorted array it turns the array into a heap, then takes the largest item in the heap, then reheaps the data going from largest to smallest
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
