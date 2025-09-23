@@ -4,7 +4,7 @@ import java.util.Collections;
 public class Sort{
     protected int[] array;
     protected String type;
-    private int defLen = 10000;
+    final private int defLen = 1000000;
 
     //Constructors
     public Sort(){
