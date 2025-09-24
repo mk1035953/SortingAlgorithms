@@ -8,13 +8,13 @@ public class QuickSort extends Sort{
         super("Quick", array);
     }
     public void sort(){  
-        quicksort(array, 0, array.length-1);
+        quicksort(0, array.length-1);
     }
-    public void quicksort(int[] arr, int lo, int hi){
+    public void quicksort(int lo, int hi){
         if (lo >= 0 && hi >= 0 && lo < hi){
-            int p = partition(arr, lo, hi);
-            quicksort(arr, lo, p);
-            quicksort(arr, p + 1, hi);
+            int p = partition(array, lo, hi);
+            quicksort(lo, p);
+            quicksort(p + 1, hi);
         }
     }
     public int partition(int[] arr, int lo, int hi){
