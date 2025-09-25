@@ -2,10 +2,10 @@ package Sorts;
 
 public class BubbleSort extends Sort{
     public BubbleSort(){
-        super("BubbleSort");
+        super("Bubble");
     }
     public BubbleSort(int[] array){
-        super("Bubble Sort", array);
+        super("Bubble", array);
     }
     public void sort(){
         int swaps = 1;

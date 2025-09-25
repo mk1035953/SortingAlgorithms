@@ -2,10 +2,10 @@ package Sorts;
 
 public class HeapSort extends Sort{
     public HeapSort(){
-        super("Heap Sort");
+        super("Heap");
     }
     public HeapSort(int[] array){
-        super("Heap Sort", array);
+        super("Heap", array);
     }
     public void sort(){
         heapify();

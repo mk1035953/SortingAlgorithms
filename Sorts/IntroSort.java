@@ -71,7 +71,6 @@ public class IntroSort extends Sort{
     }
     public int partition(int[] arr, int lo, int hi){
         int pivot = arr[lo];
-
         int a = lo - 1;
         int b = hi + 1;
         if(a<0){
@@ -80,20 +79,16 @@ public class IntroSort extends Sort{
         if(b>hi){
             b = hi;
         }
-
         while(true){
             while(arr[a] < pivot){
                 a++;
             }
-            
             while(arr[b] > pivot){
                 b--;
             }
-
             if(a >= b){
                 return b;
             }
-            
             swap(arr,a,b);
         }
     }

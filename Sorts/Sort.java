@@ -4,7 +4,7 @@ import java.util.Collections;
 public class Sort{
     protected int[] array;
     protected String type;
-    final private int defLen = 1000000;
+    final private int defLen = 10000;
 
     //Constructors
     public Sort(){
@@ -78,4 +78,5 @@ public class Sort{
     }
     public void sort(){}//this is a placeholder for the subclasses
     public String getType(){return type;}
+    public int getLen(){return array.length;}
 }
