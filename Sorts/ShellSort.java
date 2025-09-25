@@ -1,8 +1,9 @@
 package Sorts;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 public class ShellSort extends Sort{
-    private ArrayList<Integer> gapsize = new ArrayList();
+    private int[] gaps;
     public ShellSort(){
         super("Shell");
         makeGaps();
@@ -12,39 +13,29 @@ public class ShellSort extends Sort{
         makeGaps();
     }
     public void makeGaps(){
-        int num = 1;
-        while(num<array.length){
-            if(num==1||isPrime(num)){
-                gapsize.add(num);
-                num*=3;
-            }
-            else{
-                num++;
-            }
+        ArrayList<Integer> gapsize = new ArrayList(Arrays.asList(1,4,10,23,57,132,301,701,1750));
+        int num = 1750;
+        while((int)(num*2.25)<array.length){
+            num = (int)(num*2.25);
+            gapsize.add(num);
         }
-    }
-    public static boolean isPrime(int num){
-        for(int i = 2; i<num/2+1;i++){
-            if(num%i==0){
-                return false;
-            }
+        gaps = new int[gapsize.size()];
+        for(int i = 0; i<gaps.length;i++){
+            gaps[i]=gapsize.get(i);
         }
-        return true;
     }
     public void sort(){
-        int gap = gapsize.size()-1;
-        while(gap>=0){
-            for(int i = 0; i<this.array.length-1||i+gapsize.get(gap)>array.length-1;i+=gapsize.get(gap)){
-                if(i+gapsize.get(gap)>array.length-1){
-                    break;
-                }
+        for (int g = gaps.length - 1; g >= 0; g--) {
+            int gap = gaps[g];
+            for (int i = gap; i < array.length; i++) {
+                int temp = array[i];
                 int j = i;
-                while(j>=0&&this.array[j]>this.array[j+gapsize.get(gap)]){
-                    swap(j,j+gapsize.get(gap));
-                    j-=gapsize.get(gap);
+                while (j >= gap && array[j - gap] > temp) {
+                    array[j] = array[j - gap];
+                    j -= gap;
                 }
+                array[j] = temp;
             }
-            gap--;
         }
     }
 }

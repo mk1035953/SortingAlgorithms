@@ -6,11 +6,11 @@ public class SortRunner {
         //Iterative Sorts
         sorts.add(new ShellSort());
         sorts.add(new InsertionSort());
-        sorts.add(new SelectionSort());
-        sorts.add(new ExchangeSort());
-        sorts.add(new ICantBelieveItCanSort());
-        sorts.add(new BubbleSort());
-        sorts.add(new CocktailShakerSort());
+        // sorts.add(new SelectionSort());
+        // sorts.add(new ExchangeSort());
+        // sorts.add(new ICantBelieveItCanSort());
+        // sorts.add(new BubbleSort());
+        // sorts.add(new CocktailShakerSort());
         //Recursive Sorts
         sorts.add(new MergeSort());
         sorts.add(new MergeInsertionSort());
