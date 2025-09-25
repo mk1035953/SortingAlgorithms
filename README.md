@@ -16,6 +16,7 @@ This repository contains implementations of various sorting algorithms. It serve
 ## Algorithms Included
 
 - Bubble Sort
+- CockTail Shaker Sort
 - Selection Sort
 - Insertion Sort
 - Exchange Sort
@@ -30,6 +31,7 @@ This repository contains implementations of various sorting algorithms. It serve
 
 ## Algorithm Descriptions
 - Bubble Sort - this is one of the most simple sorting algorithms, where it checks adjacent pairs in the array and swaps them if they are out of order
+- CockTail Shaker Sort - this is a slight improvement over bubble sort, instead of going up the array then restarting, it goes up then down the array swapping as it goes
 - Selection Sort - this is an easy to understand sorting algorithm, where it checks the array for the currently smallest one, and goes through the array to check increasingly greater elements. (Note: this results in the least amount of swaps)
 - Insertion Sort - this is another easy to understand sorting algorithm, where it increases in index finding where each element would go in the sorted part in the list. (Note: this is one of the fastest with smaller moves in an array, whilst larger moves will take a long amount of time)
 - Exchange Sort - this is an improvement of Selection Sort where instead of selecting the smallest element of the list and increasing as it goes, it exchanges the current index with increasingly smaller elements in the list
